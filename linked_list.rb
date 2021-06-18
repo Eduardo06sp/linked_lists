@@ -53,4 +53,18 @@ class LinkedList
 
     tmp
   end
+
+  def at(index)
+    tmp = head
+    iteration = 0
+
+    until iteration == index
+      break if tmp.nil?
+
+      tmp = tmp.next_node
+      iteration += 1
+    end
+
+    tmp || 'not found'
+  end
 end
