@@ -67,4 +67,15 @@ class LinkedList
 
     tmp || 'not found'
   end
+
+  def pop
+    tmp = head
+
+    until tmp.next_node.nil?
+      prev_node = tmp
+      tmp = tmp.next_node
+    end
+
+    prev_node.next_node = nil
+  end
 end
