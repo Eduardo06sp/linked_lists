@@ -45,4 +45,12 @@ class LinkedList
 
     count
   end
+
+  def tail
+    tmp = head
+
+    tmp = tmp.next_node until tmp.next_node.nil?
+
+    tmp
+  end
 end
