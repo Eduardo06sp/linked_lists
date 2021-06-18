@@ -102,4 +102,16 @@ class LinkedList
       count += 1
     end
   end
+
+  def to_s
+    tmp = head
+    str = ''
+
+    until tmp.nil?
+      str += "( #{tmp.value} ) -> "
+      tmp = tmp.next_node
+    end
+
+    puts "#{str} nil"
+  end
 end
