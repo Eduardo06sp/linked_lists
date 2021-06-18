@@ -90,4 +90,16 @@ class LinkedList
 
     false
   end
+
+  def find(value)
+    tmp = head
+    count = 0
+
+    until tmp.nil?
+      return count if tmp.value == value
+
+      tmp = tmp.next_node
+      count += 1
+    end
+  end
 end
