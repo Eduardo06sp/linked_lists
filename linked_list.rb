@@ -33,4 +33,16 @@ class LinkedList
     self.head = Node.new(value)
     head.next_node = prev_head
   end
+
+  def size
+    tmp = head
+    count = 0
+
+    until tmp.nil?
+      count += 1
+      tmp = tmp.next_node
+    end
+
+    count
+  end
 end
